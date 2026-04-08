@@ -200,18 +200,12 @@ export default function App() {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold leading-[0.9] mb-8">
-              HR <br />
-              <span className="text-accent">Specialist</span>.
+              People-First<span className="text-accent">,</span> <br />
+              <span className="text-accent">Business-Driven.</span>
             </h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-[1px] bg-accent"></div>
-                <span className="text-lg font-medium text-zinc-500 uppercase tracking-widest">HR & Recruiting Specialist</span>
-              </div>
-              <p className="text-xl md:text-2xl text-zinc-600 leading-relaxed max-w-xl">
-                사람과 조직의 성장을 이끄는 HR 전문가를 꿈꾸는 현채은입니다. 
-                글로벌 역량과 채용 경험을 바탕으로 비즈니스에 기여하는 임팩트를 만듭니다.
-              </p>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-[1px] bg-accent"></div>
+              <span className="text-lg font-medium text-zinc-500 uppercase tracking-widest">TA & HR Partner</span>
             </div>
           </motion.div>
         </div>
@@ -221,6 +215,7 @@ export default function App() {
       <Section title="About Me" id="about" icon={User}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
+            <h3 className="text-xl font-bold text-accent mb-4">현채은</h3>
             <p className="text-2xl leading-relaxed text-zinc-700">
               글로벌 커뮤니케이션 역량과 채용 운영 경험을 바탕으로 글로벌 비즈니스의 성장을 이끄는 HR 전문가로 성장하고자 합니다. 
             </p>
@@ -229,10 +224,10 @@ export default function App() {
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="relative aspect-[3/4] max-w-[180px] mx-auto overflow-hidden rounded-lg border-4 border-white shadow-lg bg-zinc-50"
+            className="relative aspect-[3/4] max-w-[180px] mx-auto overflow-hidden rounded-2xl shadow-xl bg-zinc-50"
           >
             <img 
-              src="https://picsum.photos/seed/professional-woman/600/800" 
+              src="https://raw.githubusercontent.com/chaeeun-hyun/portfolio/48bb622bd94a2c8a2e9df24e8e1dfd34cfaea8a7/2026%20%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84.jpg" 
               alt="Chaeeun Hyun" 
               className="w-full h-full object-cover"
               referrerPolicy="no-referrer"
@@ -338,7 +333,7 @@ export default function App() {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
             <div>
-              <h2 className="text-5xl md:text-7xl font-bold mb-8">Let's build the <br /><span className="text-accent">future</span> together.</h2>
+              <h2 className="text-5xl md:text-7xl font-bold mb-8">Let's <span className="text-accent">grow</span> <br />together.</h2>
               <p className="text-xl text-zinc-400 max-w-md">
                 새로운 도전과 협업의 기회를 기다립니다. 
                 언제든 편하게 연락주세요.
