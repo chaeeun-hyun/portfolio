@@ -87,6 +87,138 @@ const languages = [
   { name: "Korean", level: "Native" }
 ];
 
+const workExperiences = [
+  {
+    company: "CJ OliveNetworks",
+    role: "인재채용팀 인턴",
+    period: "2024.08 - 2024.12",
+    desc: ["신입 채용 프로세스 운영 지원", "채용 브랜딩 콘텐츠 및 행사 기획, 실행"],
+    projects: [
+      {
+        title: "신입 채용 프로세스 운영 지원",
+        goal: "안정적이고 체계적인 채용 운영을 통해 긍정적인 지원자 경험 제공",
+        pillars: [
+          {
+            title: "Process Management",
+            items: [
+              "채용 전형 일정 관리 및 프로세스 운영",
+              "채용 시스템 세팅 및 평가 프로세스 지원",
+              "면접 Timetable 설계 및 온라인 면접 환경(ZEP) 운영"
+            ]
+          },
+          {
+            title: "Communication",
+            items: [
+              "지원자 면접 일정 조율 및 전형 안내",
+              "현업 면접관–지원자 간 커뮤니케이션 지원"
+            ]
+          },
+          {
+            title: "Detail Orientation",
+            items: [
+              "지원자/입사 서류 관리 및 데이터 정리",
+              "면접 가이드 및 안내 자료 제작"
+            ]
+          }
+        ],
+        summary: "채용 전 과정의 안정적 운영으로 일정 지연 없이 프로세스 완료, 명확한 커뮤니케이션과 가이드 제공을 통해 지원자 경험 개선"
+      },
+      {
+        title: "채용브랜딩 프로젝트 주도",
+        goal: "일관된 채용 메시지 전달 및 지원자 접점 중심의 채용 경험 개선",
+        pillars: [
+          {
+            title: "문제 인식",
+            items: ["채용 접점별 메시지 일관성 부족", "채용/직무 정보 및 접근성 부족"]
+          },
+          {
+            title: "전략 및 실행",
+            items: ["EVP 기반 채용 브랜딩 전략 설계", "지원자 접점 중심 채용 경험 개선"]
+          },
+          {
+            title: "구체적 실행 업무",
+            items: [
+              "회사 EVP 정립 및 채용 콘텐츠 제작",
+              "현직자 직무 인터뷰 및 직무 인사이트 제공",
+              "채용 블로그 리뉴얼"
+            ]
+          }
+        ],
+        summary: "일관된 채용 메시지 전달을 통한 브랜드 경험 강화"
+      },
+      {
+        title: "채용 행사 및 지원자 접점 관리",
+        goal: "지원자 접점에서의 긍정적 경험 설계 및 채용 브랜드 인지도 강화",
+        pillars: [
+          {
+            title: "Key Tasks",
+            items: [
+              "ONS DAY 및 온라인 설명회 기획/운영 지원",
+              "행사 홍보, 디자인물(PPT/배너 등) 및 콘텐츠 제작",
+              "실시간 운영 및 현장 커뮤니케이션 관리"
+            ]
+          }
+        ],
+        summary: "온·오프라인 채용 행사 안정적 운영으로 긍정적 지원자 경험 형성"
+      }
+    ]
+  },
+  {
+    company: "건국유업",
+    role: "마케팅팀 인턴",
+    period: "2023.03 - 2023.06",
+    desc: ["SNS 채널 운영 및 CX 관리", "온/오프라인 프로모션 및 행사 운영"],
+    projects: [
+      {
+        title: "SNS 마케팅 및 고객 경험(CX) 관리",
+        goal: "소비자 참여 중심 콘텐츠 기획 및 긍정적인 고객 경험(CX) 설계",
+        pillars: [
+          {
+            title: "SNS 채널 및 콘텐츠 기획",
+            items: [
+              "타겟 트렌드 반영 카드뉴스 및 숏폼(릴스) 기획·제작",
+              "브랜드 톤앤매너 기반 카피라이팅 및 해시태그 전략 수립",
+              "인스타그램 팔로워 20% 증가 및 역대 최다 릴스 조회수 달성"
+            ]
+          },
+          {
+            title: "CX 및 리뷰 관리",
+            items: [
+              "공식몰 리뷰 모니터링 및 1:1 맞춤형 답글 작성",
+              "인스타그램 DM 대응 및 인게이지먼트 관리",
+              "인플루언서 및 파워블로거 네트워킹 풀 구축"
+            ]
+          }
+        ],
+        summary: "타겟 맞춤형 콘텐츠 전략과 밀착 소통으로 브랜드 영향력 강화"
+      },
+      {
+        title: "온·오프라인 프로모션 및 운영 지원",
+        goal: "세일즈 프로모션의 성공적인 론칭 및 고객 접점 확대",
+        pillars: [
+          {
+            title: "온라인 프로모션 및 AMD 지원",
+            items: [
+              "경쟁사 시장 조사 및 가격 비교 리서치 진행",
+              "행사 목적에 맞는 프로모션 배너 및 홍보 소재 기획/제작",
+              "타 부서 협업을 통한 타임라인 내 프로모션 성공적 실행"
+            ]
+          },
+          {
+            title: "온·오프라인 행사 운영",
+            items: [
+              "이벤트 기획 보조 및 원활한 현장 오퍼레이션 리딩",
+              "꼼꼼한 현장 대응을 통한 고객 참여도 향상",
+              "매끄러운 행사 운영으로 긍정적인 브랜드 경험(CX) 창출"
+            ]
+          }
+        ],
+        summary: "성공적인 프로모션 론칭 및 매끄러운 현장 운영으로 고객 참여 극대화"
+      }
+    ]
+  }
+];
+
 const BentoCard = ({ 
   children, 
   className = "", 
@@ -123,11 +255,12 @@ const BentoCard = ({
 export default function App() {
   const [selectedActivity, setSelectedActivity] = useState<typeof activities[0] | null>(null);
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
+  const [selectedExperience, setSelectedExperience] = useState<typeof workExperiences[0] | null>(null);
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-zinc-900 selection:bg-accent/30">
       <AnimatePresence>
-        {(selectedActivity || selectedProject) && (
+        {(selectedActivity || selectedProject || selectedExperience) && (
           <div className="fixed inset-0 z-[100] flex items-center justify-center p-6">
             <motion.div 
               initial={{ opacity: 0 }}
@@ -136,6 +269,7 @@ export default function App() {
               onClick={() => {
                 setSelectedActivity(null);
                 setSelectedProject(null);
+                setSelectedExperience(null);
               }}
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
             />
@@ -143,45 +277,120 @@ export default function App() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-2xl bg-white rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden"
+              className="relative w-full max-w-3xl bg-white rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden max-h-[90vh] overflow-y-auto"
             >
               <button 
                 onClick={() => {
                   setSelectedActivity(null);
                   setSelectedProject(null);
+                  setSelectedExperience(null);
                 }}
-                className="absolute top-8 right-8 p-2 hover:bg-zinc-100 rounded-full transition-colors"
+                className="absolute top-8 right-8 p-2 hover:bg-zinc-100 rounded-full transition-colors z-10"
               >
                 <X className="w-6 h-6 text-zinc-400" />
               </button>
               
-              <div className="mb-10">
-                <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
-                  {selectedProject ? <Sparkles className="w-7 h-7 text-accent" /> : <Trophy className="w-7 h-7 text-accent" />}
-                </div>
-                {selectedProject && (
-                  <span className="text-xs font-bold uppercase tracking-widest text-accent mb-2 block">{selectedProject.category}</span>
-                )}
-                <h3 className="text-3xl font-bold mb-4">{selectedProject?.title || selectedActivity?.title}</h3>
-                <p className="text-lg text-zinc-500 leading-relaxed">{selectedProject?.summary || selectedActivity?.summary}</p>
-              </div>
+              {selectedExperience ? (
+                <div className="space-y-12">
+                  <div className="space-y-4">
+                    <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
+                      <Briefcase className="w-7 h-7 text-accent" />
+                    </div>
+                    <h3 className="text-3xl font-bold tracking-tight">{selectedExperience.company}</h3>
+                    <p className="text-sm font-bold uppercase tracking-widest text-zinc-400">{selectedExperience.period}</p>
+                  </div>
 
-              <div className="space-y-6">
-                <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">Detailed Information</h4>
-                <ul className="space-y-4">
-                  {(selectedProject?.details || selectedActivity?.details || []).map((detail, i) => (
-                    <li key={i} className="flex gap-4 text-zinc-600 leading-relaxed">
-                      <div className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
-                      {detail}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                  <div className="space-y-16">
+                    {selectedExperience.projects?.map((project, idx) => (
+                      <div key={idx} className="space-y-8 relative">
+                        {selectedExperience.projects!.length > 1 && (
+                          <div className="flex items-center gap-4 mb-6">
+                            <div className="px-3 py-1 bg-accent text-white text-[10px] font-bold rounded-full uppercase tracking-widest">
+                              Project {idx + 1}
+                            </div>
+                            <div className="h-[1px] flex-1 bg-zinc-100"></div>
+                          </div>
+                        )}
+                        
+                        <div className="space-y-4">
+                          <h4 className="text-2xl font-bold text-zinc-900">{project.title}</h4>
+                          {project.goal && (
+                            <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10 text-center">
+                              <p className="text-lg font-bold text-accent">{project.goal}</p>
+                            </div>
+                          )}
+                        </div>
+
+                        {project.pillars && (
+                          <div className={`grid grid-cols-1 ${
+                            project.pillars.length === 1 ? 'md:grid-cols-1 max-w-2xl mx-auto' : 
+                            project.pillars.length === 2 ? 'md:grid-cols-2' : 
+                            'md:grid-cols-3'
+                          } gap-4`}>
+                            {project.pillars.map((pillar, i) => (
+                              <div key={i} className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 space-y-4">
+                                <h5 className="text-xs font-bold uppercase tracking-widest text-zinc-400 border-b border-zinc-200 pb-2">{pillar.title}</h5>
+                                <ul className="space-y-2">
+                                  {pillar.items.map((item, j) => (
+                                    <li key={j} className="text-sm text-zinc-600 leading-relaxed flex gap-2">
+                                      <div className="w-1 h-1 rounded-full bg-accent mt-2 shrink-0" />
+                                      {item}
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {project.summary && (
+                          <div className="pt-6 border-t border-zinc-100">
+                            <p className="text-lg font-medium text-zinc-800 leading-relaxed text-center">
+                              {project.summary.split(',').map((part, i) => (
+                                <React.Fragment key={i}>
+                                  {i > 0 && <br />}
+                                  <span className={i > 0 ? "pl-4" : ""}>{part.trim()}</span>
+                                </React.Fragment>
+                              ))}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <>
+                  <div className="mb-10">
+                    <div className="w-14 h-14 bg-accent/10 rounded-2xl flex items-center justify-center mb-6">
+                      {selectedProject ? <Sparkles className="w-7 h-7 text-accent" /> : <Trophy className="w-7 h-7 text-accent" />}
+                    </div>
+                    {selectedProject && (
+                      <span className="text-xs font-bold uppercase tracking-widest text-accent mb-2 block">{selectedProject.category}</span>
+                    )}
+                    <h3 className="text-3xl font-bold mb-4">{selectedProject?.title || selectedActivity?.title}</h3>
+                    <p className="text-lg text-zinc-500 leading-relaxed">{selectedProject?.summary || selectedActivity?.summary}</p>
+                  </div>
+
+                  <div className="space-y-6">
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">Detailed Information</h4>
+                    <ul className="space-y-4">
+                      {(selectedProject?.details || selectedActivity?.details || []).map((detail, i) => (
+                        <li key={i} className="flex gap-4 text-zinc-600 leading-relaxed">
+                          <div className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </>
+              )}
 
               <button 
                 onClick={() => {
                   setSelectedActivity(null);
                   setSelectedProject(null);
+                  setSelectedExperience(null);
                 }}
                 className="mt-12 w-full py-5 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-accent transition-all shadow-lg shadow-zinc-900/10"
               >
@@ -213,55 +422,56 @@ export default function App() {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-6 pt-40 pb-20">
         {/* Hero Section */}
-        <header className="mb-20">
+        <header className="mb-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="space-y-32"
           >
-            <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter mb-12">
-              People-First<span className="text-accent">,</span> <br />
-              <span className="text-accent">Business-Driven.</span>
-            </h1>
-            <div className="flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-[1px] bg-accent"></div>
-                <span className="text-sm font-bold text-zinc-400 uppercase tracking-[0.3em]">TA & HR Partner</span>
-              </div>
-              <div className="flex gap-2">
-                {["HRM", "Recruiting", "Branding"].map(tag => (
-                  <span key={tag} className="px-4 py-1.5 bg-white border border-zinc-100 rounded-full text-[10px] font-bold uppercase tracking-widest text-zinc-500">
-                    {tag}
-                  </span>
-                ))}
+            <div>
+              <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter mb-12">
+                People-First<span className="text-accent">,</span> <br />
+                <span className="text-accent">Business-Driven.</span>
+              </h1>
+              <div className="flex flex-wrap items-center gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-[1px] bg-accent"></div>
+                  <span className="text-sm font-bold text-zinc-400 uppercase tracking-[0.3em]">TA & HR Partner</span>
+                </div>
+                <div className="flex gap-2">
+                  {["recruiting", "branding", "cx"].map(tag => (
+                    <span key={tag} className="px-4 py-1.5 bg-white border border-zinc-100 rounded-full text-[10px] font-bold uppercase tracking-widest text-zinc-500">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </motion.div>
-        </header>
 
-        {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          
-          {/* About Me - Full Width */}
-          <BentoCard id="about" title="About Me" icon={User} className="md:col-span-12">
-            <div className="flex flex-col md:flex-row gap-12 items-center">
-              <div className="flex-1">
-                <h3 className="text-4xl font-bold mb-6">현채은</h3>
-                <p className="text-2xl leading-relaxed text-zinc-600 font-medium">
-                  성장하는 조직의 '인재 밀도'를 높이는 비즈니스 파트너
+            {/* Integrated About Me */}
+            <div id="about" className="flex flex-col md:flex-row gap-16 items-start">
+              <div className="flex-1 space-y-10">
+                <div className="space-y-4">
+                  <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent">About Me</p>
+                  <h3 className="text-6xl font-bold tracking-tighter">현채은</h3>
+                </div>
+                <p className="text-3xl md:text-4xl leading-[1.1] text-zinc-900 font-bold tracking-tight max-w-2xl">
+                  성장하는 조직의 '인재 밀도'를 높이는 <br />
+                  비즈니스 파트너
                 </p>
-                <div className="mt-8 flex gap-4">
-                  <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100 flex-1">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-1">Focus</p>
-                    <p className="text-sm font-bold">Global HR & TA</p>
+                <div className="flex gap-16 pt-4">
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Focus</p>
+                    <p className="text-xl font-bold">HR & Talent Acquisition</p>
                   </div>
-                  <div className="p-4 bg-zinc-50 rounded-2xl border border-zinc-100 flex-1">
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-1">Experience</p>
-                    <p className="text-sm font-bold">Recruiting & Marketing</p>
+                  <div className="space-y-2">
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Experience</p>
+                    <p className="text-xl font-bold">Recruiting & Employer Branding</p>
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-56 aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl shadow-accent/10">
+              <div className="w-full md:w-64 aspect-[3/4] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-accent/10 bg-zinc-100">
                 <img 
                   src="https://raw.githubusercontent.com/chaeeun-hyun/portfolio/48bb622bd94a2c8a2e9df24e8e1dfd34cfaea8a7/2026%20%EC%A6%9D%EB%AA%85%EC%82%AC%EC%A7%84.jpg" 
                   alt="Chaeeun Hyun" 
@@ -270,66 +480,76 @@ export default function App() {
                 />
               </div>
             </div>
-          </BentoCard>
 
-          {/* Skills - Parallel Row */}
-          <BentoCard title="Skills" icon={Cpu} className="md:col-span-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-              {skills.map(skill => (
-                <div key={skill.category} className="space-y-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">{skill.icon}</span>
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">{skill.category}</h4>
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {skill.items.map(item => (
-                      <span key={item} className="px-3 py-1 bg-white border border-zinc-100 rounded-lg text-xs font-bold text-zinc-600 group-hover:border-accent/30 transition-colors">
-                        {item}
-                      </span>
-                    ))}
-                  </div>
+            {/* Integrated Skills & Languages */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-20 pt-20 border-t border-zinc-100">
+              <div className="md:col-span-8 space-y-12">
+                <div className="space-y-4">
+                  <p className="text-base font-bold uppercase tracking-widest text-accent">Skills</p>
                 </div>
-              ))}
-            </div>
-          </BentoCard>
-
-          {/* Languages - Parallel Row */}
-          <BentoCard title="Languages" icon={Languages} className="md:col-span-4">
-            <div className="space-y-6 flex flex-col justify-center h-full pb-4">
-              {languages.map(lang => (
-                <div key={lang.name} className="flex justify-between items-end border-b border-zinc-100 pb-4 last:border-0">
-                  <div>
-                    <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-1">Language</p>
-                    <h4 className="text-xl font-bold text-zinc-800">{lang.name}</h4>
-                  </div>
-                  <span className="text-xs font-bold text-accent bg-accent/5 px-3 py-1 rounded-full uppercase tracking-widest">{lang.level}</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+                  {skills.map(skill => (
+                    <div key={skill.category} className="space-y-6">
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl">{skill.icon}</span>
+                        <h4 className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">{skill.category}</h4>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {skill.items.map(item => (
+                          <span key={item} className="px-4 py-2 bg-white border border-zinc-100 rounded-xl text-xs font-bold text-zinc-600">
+                            {item}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
+              <div className="md:col-span-4 space-y-12">
+                <div className="space-y-4">
+                  <p className="text-base font-bold uppercase tracking-widest text-accent">Languages</p>
+                </div>
+                <div className="space-y-8">
+                  {languages.map(lang => (
+                    <div key={lang.name} className="flex justify-between items-end border-b border-zinc-100 pb-6 last:border-0">
+                      <div>
+                        <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-1">Language</p>
+                        <h4 className="text-2xl font-bold text-zinc-800">{lang.name}</h4>
+                      </div>
+                      <span className="text-sm font-bold text-accent bg-accent/5 px-4 py-2 rounded-full uppercase tracking-widest">{lang.level}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-          </BentoCard>
+          </motion.div>
+        </header>
 
+        {/* Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+          
           {/* Work Experience - Full Width or Large */}
           <BentoCard id="experience" title="Work Experience" icon={Briefcase} className="md:col-span-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              {[
-                {
-                  company: "CJ OliveNetworks",
-                  role: "인재채용팀 인턴",
-                  period: "2024.08 - 2024.12",
-                  desc: ["신입 채용 프로세스 운영 지원", "채용 브랜딩 및 마케팅 전략 수립"]
-                },
-                {
-                  company: "건국유업",
-                  role: "마케팅팀 인턴",
-                  period: "2023.03 - 2023.06",
-                  desc: ["SNS 콘텐츠 기획 및 제작", "온/오프라인 행사 운영"]
-                }
-              ].map((exp, i) => (
-                <div key={i} className="relative pl-8 border-l border-zinc-100 group">
+              {workExperiences.map((exp, i) => (
+                <div 
+                  key={i} 
+                  onClick={() => exp.projects && setSelectedExperience(exp)}
+                  className={`relative pl-8 border-l border-zinc-100 group ${exp.projects ? 'cursor-pointer' : ''}`}
+                >
                   <div className="absolute left-[-5px] top-0 w-2.5 h-2.5 rounded-full bg-zinc-200 group-hover:bg-accent transition-colors" />
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">{exp.period}</p>
-                  <h4 className="text-2xl font-bold mb-1 group-hover:text-accent transition-colors">{exp.company}</h4>
-                  <p className="text-zinc-500 font-medium mb-4">{exp.role}</p>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2">{exp.period}</p>
+                      <h4 className="text-2xl font-bold mb-1 group-hover:text-accent transition-colors">{exp.company}</h4>
+                      <p className="text-zinc-500 font-medium mb-4">{exp.role}</p>
+                    </div>
+                    {exp.projects && (
+                      <div className="p-2 bg-zinc-50 rounded-full group-hover:bg-accent group-hover:text-white transition-all">
+                        <ArrowUpRight className="w-4 h-4" />
+                      </div>
+                    )}
+                  </div>
                   <ul className="space-y-2">
                     {exp.desc.map((d, j) => (
                       <li key={j} className="text-sm text-zinc-600 flex gap-2">
@@ -338,6 +558,11 @@ export default function App() {
                       </li>
                     ))}
                   </ul>
+                  {exp.projects && (
+                    <p className="text-[10px] font-bold uppercase tracking-widest text-accent mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                      Click to view detailed contributions
+                    </p>
+                  )}
                 </div>
               ))}
             </div>
