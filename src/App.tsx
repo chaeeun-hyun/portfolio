@@ -20,30 +20,57 @@ import {
 
 const activities = [
   {
-    title: "서울 에듀테크 소프트랩 앰버서더",
-    summary: "교사 대상 에듀테크 연수 지원 및 트렌드 분석. 에듀테크 코리아 페어 참여.",
-    details: [
-      "초중고 교사 대상 에듀테크 연수 프로그램 지원 및 운영",
-      "소프트랩 실증 제품 시연 및 '에듀테크 코리아 페어' 참여를 통한 에듀테크 트렌드 분석",
-      "에듀테크 제품의 교육 현장 적용성 검토 및 피드백 제공"
-    ]
-  },
-  {
-    title: "건국대학교 공식 유튜브 크리에이터 'KU:REATOR'",
-    summary: "공식 유튜브 채널 영상 기획, 촬영, 출연 및 편집.",
+    title: "건국대학교 ‘KU:REATOR’",
+    summary: "공식 유튜브 채널 영상 기획, 촬영, 출연 및 편집",
     details: [
       "대학 공식 유튜브 채널의 영상 콘텐츠 기획 및 시나리오 작성",
-      "영상 촬영, 출연 및 프리미어 프로를 활용한 영상 편집",
-      "대학 브랜딩 강화를 위한 트렌디한 숏폼 및 롱폼 콘텐츠 제작"
+      "영상 촬영, 출연 및 프리미어 프로를 활용한 영상 편집"
+    ],
+    links: [
+      { label: "영상 1", url: "https://youtu.be/zyoQiHnNQ-w?si=8_BjF5UxNAr6E_XF" },
+      { label: "영상 2", url: "https://youtu.be/UOndG9hycv4?si=IongQz83g6M8DRhg" },
+      { label: "영상 3", url: "https://youtu.be/d_0aQjJ_wOY?si=aJOStIeV-sHuKVzM" },
+      { label: "영상 4", url: "https://youtu.be/xZIxAhvDFoQ?si=CqcQLBzAdLA_cQKJ" }
     ]
   },
   {
-    title: "인사동 홍보 아이디어 공모전 수상",
-    summary: "내/외국인 타겟 관광 코스 기획 및 홍보 영상 제작 수상.",
+    title: "에듀테크 소프트랩",
+    summary: "초·중·고 교사 대상 에듀테크 연수 프로그램 지원 및 트렌드 분석",
     details: [
-      "내/외국인 관광객을 위한 맞춤형 인사동 테마 관광 코스 기획",
-      "인사동의 전통과 현대가 어우러진 매력을 담은 홍보 동영상 제작",
-      "창의적인 홍보 전략 제안을 통한 공모전 입상"
+      "초·중·고 교사 대상 에듀테크 연수 프로그램 지원",
+      "에듀테크 제품 리서치 및 실증 제품의 교육 현장 적용성 피드백",
+      "‘에듀테크 코리아 페어’ 참여 및 최신 에듀테크 산업 트렌드 분석"
+    ]
+  },
+  {
+    title: "인사동 홍보 공모전",
+    summary: "인사동 관광 코스 기획 및 로컬 큐레이팅 SNS 운영 제안",
+    details: [
+      "‘슬로우 트래블(Slow Travel)’을 컨셉으로 휴식과 재충전에 집중하는 인사동 관광 코스 기획",
+      "내국인을 위한 ‘재충전 코스’와 외국인을 위한 ‘첫 방문 누빔 코스’로 나누어 맞춤형 장소 제안",
+      "인스타그램을 활용한 인사동 로컬 큐레이팅 SNS 계정 운영 방안 제안"
+    ]
+  },
+  {
+    title: "전통시장 활성화 프로젝트",
+    summary: "[4.16 재단 청년 꿈 지원사업] 꿀떡 프로젝트 기획 및 운영",
+    goal: "코로나19로 침체된 전통시장(공릉동 도깨비시장)에 청년들의 발길을 이끌어 활기를 불어넣고, 세대 간 소통의 장 마련",
+    pillars: [
+      {
+        title: "Role & Task",
+        items: [
+          "프로그램 기획 및 총괄: 부팀장으로서 팀원들과 협력해 행사 장소(공릉동 도깨비시장)를 직접 섭외하고, ‘시장 탐방 지원’, ‘참여형 부스’ 등 행사 전반을 기획 및 운영",
+          "로컬 스토리텔링: 시장 상인들을 직접 인터뷰하여 그들의 철학과 애정이 담긴 이야기를 발굴하고, 이를 SNS 카드뉴스와 오프라인 콘텐츠로 제작하여 홍보",
+          "행사 브랜딩 및 소통: 현수막, 리플릿 등 디자인 굿즈 제작 및 시장 사업단과의 적극적인 미팅을 통한 현장 조율"
+        ]
+      },
+      {
+        title: "Result & Insight",
+        items: [
+          "성공적인 참여자 모집으로 침체된 시장에 청년들의 생기를 불어넣고, 행사 당일 북적이는 시장 분위기 조성 성공",
+          "팀원 및 시장 관계자들과의 유기적인 협업으로 프로젝트를 완수하며, 기획부터 실행까지 이끄는 주도적인 태도와 소통의 중요성 배움"
+        ]
+      }
     ]
   }
 ];
@@ -373,15 +400,66 @@ export default function App() {
                   </div>
 
                   <div className="space-y-6">
-                    <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">Detailed Information</h4>
-                    <ul className="space-y-4">
-                      {(selectedProject?.details || selectedActivity?.details || []).map((detail, i) => (
-                        <li key={i} className="flex gap-4 text-zinc-600 leading-relaxed">
-                          <div className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
+                    {selectedActivity?.goal && (
+                      <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10 text-center mb-8">
+                        <p className="text-lg font-bold text-accent">{selectedActivity.goal}</p>
+                      </div>
+                    )}
+
+                    {selectedActivity?.pillars ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {selectedActivity.pillars.map((pillar, i) => (
+                          <div key={i} className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 space-y-4">
+                            <h5 className="text-xs font-bold uppercase tracking-widest text-zinc-400 border-b border-zinc-200 pb-2">{pillar.title}</h5>
+                            <ul className="space-y-2">
+                              {pillar.items.map((item, j) => (
+                                <li key={j} className="text-sm text-zinc-600 leading-relaxed flex gap-2">
+                                  <div className="w-1 h-1 rounded-full bg-accent mt-2 shrink-0" />
+                                  {item}
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        ))}
+                      </div>
+                    ) : (
+                      <>
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">Detailed Information</h4>
+                        <ul className="space-y-4">
+                          {(selectedProject?.details || selectedActivity?.details || []).map((detail, i) => (
+                            <li key={i} className="flex gap-4 text-zinc-600 leading-relaxed">
+                              <div className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
+                              {detail}
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+
+                    {selectedActivity?.links && (
+                      <div className="mt-8 pt-8 border-t border-zinc-100 space-y-4">
+                        <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">&lt;제작 영상&gt;</h4>
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                          {selectedActivity.links.map((link, i) => (
+                            <a 
+                              key={i}
+                              href={link.url}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="group flex items-center justify-between p-4 bg-zinc-50 border border-zinc-100 rounded-2xl hover:bg-accent hover:border-accent transition-all duration-300"
+                            >
+                              <div className="flex items-center gap-3">
+                                <div className="p-2 bg-white rounded-lg group-hover:bg-white/20 transition-colors shadow-sm">
+                                  <ExternalLink className="w-4 h-4 text-accent group-hover:text-white" />
+                                </div>
+                                <span className="text-xs font-bold text-zinc-600 group-hover:text-white">{link.label}</span>
+                              </div>
+                              <ArrowUpRight className="w-4 h-4 text-zinc-300 group-hover:text-white transition-colors" />
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </>
               )}
@@ -431,7 +509,7 @@ export default function App() {
           >
             <div>
               <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold leading-[0.85] tracking-tighter mb-12">
-                People-First<span className="text-accent">,</span> <br />
+                People-First<span className="text-zinc-900">,</span> <br />
                 <span className="text-accent">Business-Driven.</span>
               </h1>
               <div className="flex flex-wrap items-center gap-6">
@@ -599,7 +677,7 @@ export default function App() {
 
           {/* Activities - Full Width 3-Column Grid */}
           <BentoCard id="activities" title="Activities" icon={Award} className="md:col-span-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {activities.map((activity, i) => (
                 <div 
                   key={i} 
