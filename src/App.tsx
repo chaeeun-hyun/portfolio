@@ -15,7 +15,8 @@ import {
   Languages,
   Cpu,
   Award,
-  Sparkles
+  Sparkles,
+  FileText
 } from "lucide-react";
 
 const activities = [
@@ -122,7 +123,8 @@ const projects = [
         ]
       }
     ],
-    tags: ["Curriculum Development", "Instructional Design", "Gamification"]
+    tags: ["Curriculum Development", "Instructional Design", "Gamification"],
+    link: "https://github.com/chaeeun-hyun/portfolio/raw/1d21944f7853c3888fef161939642851e0c003f6/%EC%A0%9C22%ED%9A%8C%20M.E.A.N.%EC%A0%84%208%EC%A1%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf"
   }
 ];
 
@@ -474,6 +476,21 @@ export default function App() {
                           ))}
                         </ul>
                       </>
+                    )}
+
+                    {((selectedProject as any)?.link) && (
+                      <div className="mt-8 pt-8 border-t border-zinc-100">
+                        <a 
+                          href={(selectedProject as any).link}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center justify-center gap-3 w-full py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-accent transition-all duration-300 shadow-lg shadow-zinc-200 hover:shadow-accent/20"
+                        >
+                          <FileText className="w-5 h-5" />
+                          프로그램 기획서 보기
+                          <ArrowUpRight className="w-4 h-4 opacity-50" />
+                        </a>
+                      </div>
                     )}
 
                     {selectedActivity?.links && (
