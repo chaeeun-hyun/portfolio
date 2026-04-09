@@ -54,20 +54,20 @@ const activities = [
   {
     title: "전통시장 활성화 프로젝트",
     summary: "[4.16 재단 청년 꿈 지원사업] 꿀떡 프로젝트 기획 및 운영",
-    goal: "코로나19로 침체된 전통시장(공릉동 도깨비시장)에 청년들의 발길을 이끌어 활기를 불어넣고, 세대 간 소통의 장 마련",
+    goal: "코로나19로 침체된 전통시장에 청년들의 발길을 이끌어 활기를 불어넣고, 세대 간 소통의 장 마련",
     pillars: [
       {
         title: "Role & Task",
         items: [
-          "프로그램 기획 및 총괄: 부팀장으로서 팀원들과 협력해 행사 장소(공릉동 도깨비시장)를 직접 섭외하고, ‘시장 탐방 지원’, ‘참여형 부스’ 등 행사 전반을 기획 및 운영",
-          "로컬 스토리텔링: 시장 상인들을 직접 인터뷰하여 그들의 철학과 애정이 담긴 이야기를 발굴하고, 이를 SNS 카드뉴스와 오프라인 콘텐츠로 제작하여 홍보",
+          "프로그램 기획 및 총괄: 행사시장(공릉동 도깨비시장)컨택 및 섭외 담당, ‘시장 탐방 지원’, ‘참여형 부스’ 등 행사 전반 기획 및 운영",
+          "로컬 스토리텔링: 시장 상인 인터뷰 진행, SNS 카드뉴스와 온라인 콘텐츠로 제작하여 홍보",
           "행사 브랜딩 및 소통: 현수막, 리플릿 등 디자인 굿즈 제작 및 시장 사업단과의 적극적인 미팅을 통한 현장 조율"
         ]
       },
       {
         title: "Result & Insight",
         items: [
-          "성공적인 참여자 모집으로 침체된 시장에 청년들의 생기를 불어넣고, 행사 당일 북적이는 시장 분위기 조성 성공",
+          "성공적인 참여자 모집으로 침체된 시장에 청년들의 생기를 불어넣고, 행사 당일 북적이는 시장 분위기 조성",
           "팀원 및 시장 관계자들과의 유기적인 협업으로 프로젝트를 완수하며, 기획부터 실행까지 이끄는 주도적인 태도와 소통의 중요성 배움"
         ]
       }
@@ -78,27 +78,51 @@ const activities = [
 const projects = [
   {
     category: "HR",
-    title: "'P'사 인사관리시스템 개선",
-    summary: "현행 인사관리시스템의 구조적 문제점 진단 및 데이터 기반 분석을 통해 조직 몰입도 향상을 위한 성과관리 및 보상설계 개선 방안을 제안했습니다.",
-    details: [
-      "현행 인사관리시스템의 구조적 문제점 진단 및 데이터 기반 분석",
-      "조직 몰입도 향상을 위한 성과관리 및 보상설계(C&B) 개선 방안 제안",
-      "데이터 기반의 의사결정 지원 체계 구축 제안",
-      "직무 분석을 통한 적재적소 인력 배치 가이드라인 수립"
+    title: "인적자원관리 프로젝트",
+    summary: "글로벌 엔터테인먼트 'p'사의 기존의 수직적인 성과·보상 체계 진단, 통합적 HR 솔루션 제안",
+    problem: "창의성과 민첩성이 핵심 경쟁력인 글로벌 엔터테인먼트 기업에서 발생하는 수직적이고 통제적인 HR 관행의 한계 진단",
+    goal: "비즈니스 전략과 HR 시스템의 적합성을 연계하고, 구성원의 신뢰를 회복하는 통합적 성과관리 및 보상 체계 제안",
+    pillars: [
+      {
+        title: "성과관리 체계 개편",
+        items: [
+          "단기 실적 중심에서 벗어나 창의성, 협업 능력을 종합 반영하는 '업적+역량 평가 모델' 구축",
+          "공정성 확보를 위한 '360도 다면평가' 도입 기획"
+        ]
+      },
+      {
+        title: "보상 시스템 재설계",
+        items: [
+          "글로벌 경쟁사 벤치마킹을 통한 외적 형평성(경쟁력)과 내부 직무가치 평가를 결합한 기본급 정책선 수립",
+          "역량 개발을 유도하는 '스킬 기반 임금(Skill-based Pay)' 및 성과급 제도 기획"
+        ]
+      }
     ],
-    tags: ["HRM", "C&B", "Data Analysis"]
+    tags: ["HRM", "Performance Management", "Compensation", "Data Analysis"]
   },
   {
     category: "L&D",
-    title: "영주권자를 위한 시민참여 교육 프로그램 개발",
-    summary: "국내 거주 영주권자들의 사회 통합과 능동적인 시민 참여를 독려하기 위한 맞춤형 교육 커리큘럼을 설계했습니다.",
-    details: [
-      "영주권자 대상 요구분석 및 교육 니즈 파악",
-      "시민 참여 역량 강화를 위한 단계별 교육 모듈 설계",
-      "학습자 중심의 교수 설계 및 교육 매뉴얼 제작",
-      "교육 효과성 측정을 위한 평가 도구 개발"
+    title: "교육공학과 학술전시회",
+    summary: "영주권자의 사회 통합을 위한 7주 과정 '시민참여 및 선거 교육 프로그램' 기획",
+    problem: "국내 거주 영주권자들의 사회 통합 기회 부족 및 능동적인 시민 참여를 위한 체계적인 교육 커리큘럼 부재",
+    goal: "사회 참여 장벽 극복 및 실천 역량 강화를 통해 능동적인 민주시민으로서의 사회 통합 기여",
+    pillars: [
+      {
+        title: "Curriculum & Strategy",
+        items: [
+          "학습자 및 요구 분석 기반 프로그램 커리큘럼 기획",
+          "온·오프라인 블렌디드 러닝 및 ARCS 동기유발 모형 적용"
+        ]
+      },
+      {
+        title: "Production Media",
+        items: [
+          "마이크로 러닝 웹사이트, 맞춤형 워크북, 게미피케이션(보드게임) 개발",
+          "선거용어집, 활동기록 여권 등 학습 보조매체 제작"
+        ]
+      }
     ],
-    tags: ["Instructional Design", "L&D", "Curriculum Development"]
+    tags: ["Curriculum Development", "Instructional Design", "Gamification"]
   }
 ];
 
@@ -116,10 +140,10 @@ const languages = [
 
 const workExperiences = [
   {
-    company: "CJ OliveNetworks",
+    company: "CJ올리브네트웍스",
     role: "인재채용팀 인턴",
     period: "2024.08 - 2024.12",
-    desc: ["신입 채용 프로세스 운영 지원", "채용 브랜딩 콘텐츠 및 행사 기획, 실행"],
+    desc: ["신입 채용 프로세스 운영 지원", "채용 브랜딩 콘텐츠 및 행사 기획·실행"],
     projects: [
       {
         title: "신입 채용 프로세스 운영 지원",
@@ -400,19 +424,35 @@ export default function App() {
                   </div>
 
                   <div className="space-y-6">
-                    {selectedActivity?.goal && (
-                      <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10 text-center mb-8">
-                        <p className="text-lg font-bold text-accent">{selectedActivity.goal}</p>
+                    {(selectedActivity?.problem || (selectedProject as any)?.problem) && (
+                      <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 flex flex-col md:flex-row gap-6 items-center">
+                        <div className="px-4 py-2 bg-zinc-900 text-white text-[10px] font-bold rounded-full uppercase tracking-widest shrink-0">
+                          Problem
+                        </div>
+                        <p className="text-zinc-600 font-medium leading-relaxed">
+                          {selectedActivity?.problem || (selectedProject as any)?.problem}
+                        </p>
                       </div>
                     )}
 
-                    {selectedActivity?.pillars ? (
+                    {(selectedActivity?.goal || (selectedProject as any)?.goal) && (
+                      <div className="p-6 bg-accent/5 rounded-2xl border border-accent/10 flex flex-col md:flex-row gap-6 items-center">
+                        <div className="px-4 py-2 bg-accent text-white text-[10px] font-bold rounded-full uppercase tracking-widest shrink-0">
+                          Goal
+                        </div>
+                        <p className="text-accent font-bold leading-relaxed">
+                          {selectedActivity?.goal || (selectedProject as any)?.goal}
+                        </p>
+                      </div>
+                    )}
+
+                    {(selectedActivity?.pillars || (selectedProject as any)?.pillars) ? (
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {selectedActivity.pillars.map((pillar, i) => (
+                        {(selectedActivity?.pillars || (selectedProject as any)?.pillars).map((pillar: any, i: number) => (
                           <div key={i} className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 space-y-4">
                             <h5 className="text-xs font-bold uppercase tracking-widest text-zinc-400 border-b border-zinc-200 pb-2">{pillar.title}</h5>
                             <ul className="space-y-2">
-                              {pillar.items.map((item, j) => (
+                              {pillar.items.map((item: string, j: number) => (
                                 <li key={j} className="text-sm text-zinc-600 leading-relaxed flex gap-2">
                                   <div className="w-1 h-1 rounded-full bg-accent mt-2 shrink-0" />
                                   {item}
@@ -426,7 +466,7 @@ export default function App() {
                       <>
                         <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">Detailed Information</h4>
                         <ul className="space-y-4">
-                          {(selectedProject?.details || selectedActivity?.details || []).map((detail, i) => (
+                          {((selectedProject as any)?.details || selectedActivity?.details || []).map((detail: string, i: number) => (
                             <li key={i} className="flex gap-4 text-zinc-600 leading-relaxed">
                               <div className="w-2 h-2 rounded-full bg-accent mt-2.5 shrink-0" />
                               {detail}
@@ -714,7 +754,7 @@ export default function App() {
                   <div className="flex justify-between items-start mb-6">
                     <div>
                       <span className="text-[10px] font-bold uppercase tracking-widest text-accent mb-2 block">
-                        {project.category} {project.category === "HR" ? "SYSTEM IMPROVEMENT" : "PROGRAM DEVELOPMENT"}
+                        {project.category === "HR" ? "HR SYSTEM IMPROVEMENT" : "LEARNING & DEVELOPMENT"}
                       </span>
                       <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-accent transition-colors">{project.title}</h3>
                     </div>
@@ -723,14 +763,11 @@ export default function App() {
                     </div>
                   </div>
                   
-                  <ul className="space-y-3 mb-8">
-                    {project.details.slice(0, 2).map((detail, j) => (
-                      <li key={j} className="flex gap-3 text-sm text-zinc-600 leading-relaxed">
-                        <ChevronRight className="w-4 h-4 text-accent mt-1 shrink-0" />
-                        {detail}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mb-8">
+                    <p className="text-sm text-zinc-600 leading-relaxed line-clamp-3">
+                      {project.summary}
+                    </p>
+                  </div>
 
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
