@@ -805,6 +805,7 @@ export default function App() {
                   <div>
                     <h4 className="text-xl font-bold">건국대학교</h4>
                     <p className="text-zinc-500 text-sm">교육공학 전공 / 경영학 부전공</p>
+                    <p className="text-zinc-500 text-sm">GPA: 4.29 / 4.5</p>
                   </div>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Seoul, KR</span>
                 </div>
