@@ -44,12 +44,16 @@ const activities = [
     ]
   },
   {
-    title: "인사동 홍보 공모전",
+    title: "인사동 홍보 공모전 수상",
     summary: "인사동 관광 코스 기획 및 로컬 큐레이팅 SNS 운영 제안",
     details: [
       "‘슬로우 트래블(Slow Travel)’을 컨셉으로 휴식과 재충전에 집중하는 인사동 관광 코스 기획",
       "내국인을 위한 ‘재충전 코스’와 외국인을 위한 ‘첫 방문 누빔 코스’로 나누어 맞춤형 장소 제안",
       "인스타그램을 활용한 인사동 로컬 큐레이팅 SNS 계정 운영 방안 제안"
+    ],
+    images: [
+      "https://github.com/chaeeun-hyun/portfolio/raw/8be7717fbffaff1f6c6b2d55d5c28d153a86ab01/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C2.PNG",
+      "https://github.com/chaeeun-hyun/portfolio/raw/8be7717fbffaff1f6c6b2d55d5c28d153a86ab01/%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C18.PNG"
     ]
   },
   {
@@ -99,7 +103,8 @@ const projects = [
         ]
       }
     ],
-    tags: ["HRM", "Performance Management", "Compensation", "Data Analysis"]
+    tags: ["HRM", "Performance Management", "Compensation", "Data Analysis"],
+    image: "https://github.com/chaeeun-hyun/portfolio/raw/af9035fc4a23d6abc5e8ff6a417c3313c00673da/Base%20Pay%20Regression%20Line.png"
   },
   {
     category: "L&D",
@@ -124,7 +129,7 @@ const projects = [
       }
     ],
     tags: ["Curriculum Development", "Instructional Design", "Gamification"],
-    link: "https://github.com/chaeeun-hyun/portfolio/raw/1d21944f7853c3888fef161939642851e0c003f6/%EC%A0%9C22%ED%9A%8C%20M.E.A.N.%EC%A0%84%208%EC%A1%B0%20%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%EA%B8%B0%ED%9A%8D%EC%84%9C.pdf"
+    link: "https://drive.google.com/file/d/1izRHtzqMtEn_Id1ABvGGAxwOQgAkNLL5/view?usp=sharing"
   }
 ];
 
@@ -309,6 +314,8 @@ export default function App() {
   const [selectedActivity, setSelectedActivity] = useState<typeof activities[0] | null>(null);
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
   const [selectedExperience, setSelectedExperience] = useState<typeof workExperiences[0] | null>(null);
+  const [isImageZoomed, setIsImageZoomed] = useState(false);
+  const [zoomedImageUrl, setZoomedImageUrl] = useState<string | null>(null);
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] text-zinc-900 selection:bg-accent/30">
@@ -478,17 +485,104 @@ export default function App() {
                       </>
                     )}
 
+                    {(selectedProject as any)?.image && (
+                      <div className="mt-8 flex flex-col items-center">
+                        <div 
+                          onClick={() => {
+                            setZoomedImageUrl((selectedProject as any).image);
+                            setIsImageZoomed(true);
+                          }}
+                          className="relative group cursor-zoom-in rounded-2xl overflow-hidden border border-zinc-100 shadow-sm max-w-[80%] mx-auto"
+                        >
+                          <img 
+                            src={(selectedProject as any).image} 
+                            alt="Project Visualization" 
+                            className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                            referrerPolicy="no-referrer"
+                          />
+                          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <Sparkles className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                          </div>
+                        </div>
+                        <p className="mt-4 text-[10px] text-zinc-400 font-bold uppercase tracking-widest text-center">
+                          {selectedProject.category === "HR" ? "Pay Policy Line 설계 분석" : "프로그램 시각 자료"}
+                        </p>
+                      </div>
+                    )}
+
+                    {(selectedActivity as any)?.images && (
+                      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        {(selectedActivity as any).images.map((img: string, i: number) => (
+                          <div key={i} className="flex flex-col items-center">
+                            <div 
+                              onClick={() => {
+                                setZoomedImageUrl(img);
+                                setIsImageZoomed(true);
+                              }}
+                              className="relative group cursor-zoom-in rounded-2xl overflow-hidden border border-zinc-100 shadow-sm w-full"
+                            >
+                              <img 
+                                src={img} 
+                                alt={`Project Visualization ${i + 1}`} 
+                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                <Sparkles className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
+                    {/* Image Zoom Overlay */}
+                    <AnimatePresence>
+                      {isImageZoomed && zoomedImageUrl && (
+                        <motion.div 
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          onClick={() => {
+                            setIsImageZoomed(false);
+                            setZoomedImageUrl(null);
+                          }}
+                          className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
+                        >
+                          <motion.img 
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            src={zoomedImageUrl}
+                            alt="Zoomed Visualization"
+                            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                            referrerPolicy="no-referrer"
+                          />
+                          <button 
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setIsImageZoomed(false);
+                              setZoomedImageUrl(null);
+                            }}
+                            className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+                          >
+                            <X className="w-6 h-6" />
+                          </button>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+
                     {((selectedProject as any)?.link) && (
-                      <div className="mt-8 pt-8 border-t border-zinc-100">
+                      <div className="mt-6 pt-6 border-t border-zinc-100 flex justify-end">
                         <a 
                           href={(selectedProject as any).link}
                           target="_blank"
                           rel="noreferrer"
-                          className="flex items-center justify-center gap-3 w-full py-4 bg-zinc-900 text-white rounded-2xl font-bold hover:bg-accent transition-all duration-300 shadow-lg shadow-zinc-200 hover:shadow-accent/20"
+                          className="flex items-center gap-2 px-4 py-2.5 bg-zinc-100 text-zinc-600 rounded-xl text-xs font-bold hover:bg-zinc-900 hover:text-white transition-all duration-300"
                         >
-                          <FileText className="w-5 h-5" />
+                          <FileText className="w-3.5 h-3.5" />
                           프로그램 기획서 보기
-                          <ArrowUpRight className="w-4 h-4 opacity-50" />
+                          <ArrowUpRight className="w-3 h-3 opacity-50" />
                         </a>
                       </div>
                     )}
