@@ -751,27 +751,6 @@ export default function App() {
               </div>
             </div>
 
-            {/* Philosophy Section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="max-w-3xl py-12 border-y border-zinc-100"
-            >
-              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 mb-6">
-                AI 기반의 효율화, <span className="text-accent">Human-Touch</span> 기반의 몰입.
-              </h2>
-              <div className="space-y-2">
-                <p className="text-lg text-zinc-500 leading-relaxed font-medium">
-                  AI로 반복 업무를 줄이고, 사람과 조직의 연결에 집중합니다.
-                </p>
-                <p className="text-lg text-zinc-500 leading-relaxed font-medium">
-                  고밀도 조직으로 비즈니스의 성장을 이끄는 <span className="text-zinc-900">High-Touch HR 파트너</span>입니다.
-                </p>
-              </div>
-            </motion.div>
-
             {/* Integrated About Me */}
             <div id="about" className="flex flex-col md:flex-row gap-16 items-start">
               <div className="flex-1 space-y-10">
@@ -779,10 +758,21 @@ export default function App() {
                   <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent">About Me</p>
                   <h3 className="text-6xl font-bold tracking-tighter">현채은</h3>
                 </div>
-                <p className="text-3xl md:text-4xl leading-[1.1] text-zinc-900 font-bold tracking-tight max-w-2xl">
-                  조직의 '인재 밀도'를 높이는 <br />
-                  비즈니스 파트너
-                </p>
+                
+                <div className="max-w-3xl py-10 border-y border-zinc-100">
+                  <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 mb-6">
+                    AI 기반의 효율화, Human-Touch 기반의 몰입.
+                  </h2>
+                  <div className="space-y-2">
+                    <p className="text-lg text-zinc-500 leading-relaxed font-medium">
+                      AI로 반복 업무를 줄이고, 사람과 조직의 연결에 집중합니다.
+                    </p>
+                    <p className="text-lg text-zinc-500 leading-relaxed font-medium">
+                      고밀도 조직으로 비즈니스의 성장을 이끄는 <span className="text-zinc-900">High-Touch HR 파트너</span>입니다.
+                    </p>
+                  </div>
+                </div>
+
                 <div className="flex gap-16 pt-4">
                   <div className="space-y-2">
                     <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-400">Focus</p>
@@ -964,9 +954,7 @@ export default function App() {
                       </span>
                       <h3 className="text-2xl font-bold text-zinc-900 group-hover:text-accent transition-colors">{project.title}</h3>
                     </div>
-                    <div className="p-3 bg-white rounded-full shadow-sm group-hover:bg-accent group-hover:text-white transition-all">
-                      <ArrowUpRight className="w-5 h-5 text-accent group-hover:text-white" />
-                    </div>
+                    <ArrowUpRight className="w-5 h-5 text-zinc-300 group-hover:text-accent transition-colors" />
                   </div>
                   
                   <div className="mb-8">
