@@ -16,7 +16,8 @@ import {
   Cpu,
   Award,
   Sparkles,
-  FileText
+  FileText,
+  Search
 } from "lucide-react";
 
 const activities = [
@@ -62,20 +63,30 @@ const activities = [
     goal: "코로나19로 침체된 전통시장에 청년들의 발길을 이끌어 활기를 불어넣고, 세대 간 소통의 장 마련",
     pillars: [
       {
-        title: "Role & Task",
+        title: "기획 및 콘텐츠",
         items: [
-          "프로그램 기획 및 총괄: 행사시장(공릉동 도깨비시장)컨택 및 섭외 담당, ‘시장 탐방 지원’, ‘참여형 부스’ 등 행사 전반 기획 및 운영",
-          "로컬 스토리텔링: 시장 상인 인터뷰 진행, SNS 카드뉴스와 온라인 콘텐츠로 제작하여 홍보",
-          "행사 브랜딩 및 소통: 현수막, 리플릿 등 디자인 굿즈 제작 및 시장 사업단과의 적극적인 미팅을 통한 현장 조율"
+          "행사 전체 컨셉 및 타겟 맞춤형 프로그램 기획 (시장 탐방 미션, 참여형 부스 등)",
+          "시장 상인 심층 인터뷰 및 로컬 스토리 발굴"
         ]
       },
       {
-        title: "Result & Insight",
+        title: "운영 및 커뮤니케이션",
         items: [
-          "성공적인 참여자 모집으로 침체된 시장에 청년들의 생기를 불어넣고, 행사 당일 북적이는 시장 분위기 조성",
-          "팀원 및 시장 관계자들과의 유기적인 협업으로 프로젝트를 완수하며, 기획부터 실행까지 이끄는 주도적인 태도와 소통의 중요성 배움"
+          "행사 시장(공릉동 도깨비시장) 사업단 컨택 및 섭외 총괄",
+          "사전 미팅을 통한 현장 오퍼레이션 및 동선 조율"
+        ]
+      },
+      {
+        title: "브랜딩 및 홍보",
+        items: [
+          "행사 메인 비주얼, 현수막, 리플릿 등 디자인 굿즈 기획 및 제작",
+          "SNS 콘텐츠 제작를 통한 사전 홍보 및 참여자 모집"
         ]
       }
+    ],
+    images: [
+      "https://github.com/chaeeun-hyun/portfolio/raw/bc9152971c328a48114b1c98f73db947c8f5a421/2022416%EC%9D%98%EA%BF%88%EA%B2%B0%EA%B3%BC%EC%9E%90%EB%A3%8C%EC%A7%91_0.jpg",
+      "https://github.com/chaeeun-hyun/portfolio/raw/bc9152971c328a48114b1c98f73db947c8f5a421/2022416%EC%9D%98%EA%BF%88%EA%B2%B0%EA%B3%BC%EC%9E%90%EB%A3%8C%EC%A7%91_1.jpg"
     ]
   }
 ];
@@ -529,7 +540,11 @@ export default function App() {
                     )}
 
                     {(selectedActivity?.pillars || (selectedProject as any)?.pillars) ? (
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div className={`grid grid-cols-1 ${
+                        (selectedActivity?.pillars || (selectedProject as any)?.pillars).length === 3 
+                          ? "md:grid-cols-3" 
+                          : "md:grid-cols-2"
+                      } gap-4`}>
                         {(selectedActivity?.pillars || (selectedProject as any)?.pillars).map((pillar: any, i: number) => (
                           <div key={i} className="p-6 bg-zinc-50 rounded-2xl border border-zinc-100 space-y-4">
                             <h5 className="text-xs font-bold uppercase tracking-widest text-zinc-400 border-b border-zinc-200 pb-2">{pillar.title}</h5>
@@ -584,7 +599,11 @@ export default function App() {
                     )}
 
                     {(selectedActivity as any)?.images && (
-                      <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className={`mt-8 ${
+                        selectedActivity?.title === "전통시장 활성화 프로젝트" 
+                          ? "grid grid-cols-1 md:grid-cols-2 gap-4" 
+                          : "grid grid-cols-1 sm:grid-cols-2 gap-4"
+                      }`}>
                         {(selectedActivity as any).images.map((img: string, i: number) => (
                           <div key={i} className="flex flex-col items-center">
                             <div 
@@ -592,12 +611,12 @@ export default function App() {
                                 setZoomedImageUrl(img);
                                 setIsImageZoomed(true);
                               }}
-                              className="relative group cursor-zoom-in rounded-2xl overflow-hidden border border-zinc-100 shadow-sm w-full"
+                              className="relative group cursor-zoom-in w-full rounded-2xl overflow-hidden border border-zinc-100 shadow-sm"
                             >
                               <img 
                                 src={img} 
                                 alt={`Project Visualization ${i + 1}`} 
-                                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
                                 referrerPolicy="no-referrer"
                               />
                               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
@@ -616,28 +635,53 @@ export default function App() {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          onClick={() => {
-                            setIsImageZoomed(false);
-                            setZoomedImageUrl(null);
-                          }}
-                          className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
+                          className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-12"
                         >
-                          <motion.img 
-                            initial={{ scale: 0.9, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.9, opacity: 0 }}
-                            src={zoomedImageUrl}
-                            alt="Zoomed Visualization"
-                            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
-                            referrerPolicy="no-referrer"
+                          <div 
+                            className="absolute inset-0 cursor-zoom-out" 
+                            onClick={() => {
+                              setIsImageZoomed(false);
+                              setZoomedImageUrl(null);
+                            }}
                           />
+                          
+                          <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+                            <motion.div
+                              initial={{ scale: 0.9, opacity: 0 }}
+                              animate={{ scale: 1, opacity: 1 }}
+                              exit={{ scale: 0.9, opacity: 0 }}
+                              className="relative max-w-full max-h-full"
+                            >
+                              <div className="overflow-auto max-w-[90vw] max-h-[85vh] rounded-lg shadow-2xl no-scrollbar">
+                                <img 
+                                  src={zoomedImageUrl}
+                                  alt="Zoomed Visualization"
+                                  className="min-w-full h-auto cursor-crosshair hover:scale-[2] transition-transform duration-500 origin-center"
+                                  style={{ transformOrigin: 'var(--mouse-x, 50%) var(--mouse-y, 50%)' }}
+                                  onMouseMove={(e) => {
+                                    const rect = e.currentTarget.getBoundingClientRect();
+                                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                                    e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
+                                    e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
+                                  }}
+                                  referrerPolicy="no-referrer"
+                                />
+                              </div>
+                              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 text-white/50 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">
+                                <Search className="w-3 h-3" />
+                                Hover to zoom in detail
+                              </div>
+                            </motion.div>
+                          </div>
+
                           <button 
                             onClick={(e) => {
                               e.stopPropagation();
                               setIsImageZoomed(false);
                               setZoomedImageUrl(null);
                             }}
-                            className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+                            className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors z-[210]"
                           >
                             <X className="w-6 h-6" />
                           </button>
