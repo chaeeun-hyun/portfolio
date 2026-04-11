@@ -16,8 +16,7 @@ import {
   Cpu,
   Award,
   Sparkles,
-  FileText,
-  Search
+  FileText
 } from "lucide-react";
 
 const activities = [
@@ -26,13 +25,29 @@ const activities = [
     summary: "공식 유튜브 채널 영상 기획, 촬영, 출연 및 편집",
     details: [
       "대학 공식 유튜브 채널의 영상 콘텐츠 기획 및 시나리오 작성",
-      "영상 촬영, 출연 및 프리미어 프로를 활용한 영상 편집"
+      "영상 촬영 및 영상 편집(Adobe Premiere Pro, After Effects)"
     ],
     links: [
-      { label: "영상 1", url: "https://youtu.be/zyoQiHnNQ-w?si=8_BjF5UxNAr6E_XF" },
-      { label: "영상 2", url: "https://youtu.be/UOndG9hycv4?si=IongQz83g6M8DRhg" },
-      { label: "영상 3", url: "https://youtu.be/d_0aQjJ_wOY?si=aJOStIeV-sHuKVzM" },
-      { label: "영상 4", url: "https://youtu.be/xZIxAhvDFoQ?si=CqcQLBzAdLA_cQKJ" }
+      { 
+        label: "영상 1", 
+        url: "https://youtu.be/zyoQiHnNQ-w?si=8_BjF5UxNAr6E_XF",
+        thumbnail: "https://github.com/chaeeun-hyun/portfolio/raw/2e1e4e866a51a440364d6c6f30c977ba9c754ff5/kureator-thumbnail_01.png"
+      },
+      { 
+        label: "영상 2", 
+        url: "https://youtu.be/UOndG9hycv4?si=IongQz83g6M8DRhg",
+        thumbnail: "https://github.com/chaeeun-hyun/portfolio/raw/2e1e4e866a51a440364d6c6f30c977ba9c754ff5/kureator-thumbnail_02.png"
+      },
+      { 
+        label: "영상 3", 
+        url: "https://youtu.be/d_0aQjJ_wOY?si=aJOStIeV-sHuKVzM",
+        thumbnail: "https://github.com/chaeeun-hyun/portfolio/raw/2e1e4e866a51a440364d6c6f30c977ba9c754ff5/kureator-thumbnail_03.png"
+      },
+      { 
+        label: "영상 4", 
+        url: "https://youtu.be/xZIxAhvDFoQ?si=CqcQLBzAdLA_cQKJ",
+        thumbnail: "https://github.com/chaeeun-hyun/portfolio/raw/2e1e4e866a51a440364d6c6f30c977ba9c754ff5/kureator-thumbnail_04.png"
+      }
     ]
   },
   {
@@ -85,8 +100,10 @@ const activities = [
       }
     ],
     images: [
-      "https://github.com/chaeeun-hyun/portfolio/raw/bc9152971c328a48114b1c98f73db947c8f5a421/2022416%EC%9D%98%EA%BF%88%EA%B2%B0%EA%B3%BC%EC%9E%90%EB%A3%8C%EC%A7%91_0.jpg",
-      "https://github.com/chaeeun-hyun/portfolio/raw/bc9152971c328a48114b1c98f73db947c8f5a421/2022416%EC%9D%98%EA%BF%88%EA%B2%B0%EA%B3%BC%EC%9E%90%EB%A3%8C%EC%A7%91_1.jpg"
+      "https://github.com/chaeeun-hyun/portfolio/raw/dde08f51a09bc9cafa3b0260784bcd5f7cf562a6/%EB%A6%AC%ED%94%8C%EB%A6%BF1%EB%A9%B4.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/dde08f51a09bc9cafa3b0260784bcd5f7cf562a6/%EB%A6%AC%ED%94%8C%EB%A6%BF2%EB%A9%B4.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/dde08f51a09bc9cafa3b0260784bcd5f7cf562a6/%EB%A6%AC%ED%94%8C%EB%A6%BF3%EB%A9%B4.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/dde08f51a09bc9cafa3b0260784bcd5f7cf562a6/%EB%A6%AC%ED%94%8C%EB%A6%BF4%EB%A9%B4.png"
     ]
   }
 ];
@@ -601,7 +618,7 @@ export default function App() {
                     {(selectedActivity as any)?.images && (
                       <div className={`mt-8 ${
                         selectedActivity?.title === "전통시장 활성화 프로젝트" 
-                          ? "grid grid-cols-1 md:grid-cols-2 gap-4" 
+                          ? "grid grid-cols-2 md:grid-cols-4 gap-0 rounded-3xl overflow-hidden border border-zinc-100 shadow-md" 
                           : "grid grid-cols-1 sm:grid-cols-2 gap-4"
                       }`}>
                         {(selectedActivity as any).images.map((img: string, i: number) => (
@@ -611,12 +628,16 @@ export default function App() {
                                 setZoomedImageUrl(img);
                                 setIsImageZoomed(true);
                               }}
-                              className="relative group cursor-zoom-in w-full rounded-2xl overflow-hidden border border-zinc-100 shadow-sm"
+                              className={`relative group cursor-zoom-in w-full h-full ${
+                                selectedActivity?.title === "전통시장 활성화 프로젝트" 
+                                  ? "rounded-none" 
+                                  : "rounded-2xl overflow-hidden border border-zinc-100 shadow-sm"
+                              }`}
                             >
                               <img 
                                 src={img} 
                                 alt={`Project Visualization ${i + 1}`} 
-                                className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                                 referrerPolicy="no-referrer"
                               />
                               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
@@ -635,53 +656,28 @@ export default function App() {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-12"
+                          onClick={() => {
+                            setIsImageZoomed(false);
+                            setZoomedImageUrl(null);
+                          }}
+                          className="fixed inset-0 z-[200] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-12 cursor-zoom-out"
                         >
-                          <div 
-                            className="absolute inset-0 cursor-zoom-out" 
-                            onClick={() => {
-                              setIsImageZoomed(false);
-                              setZoomedImageUrl(null);
-                            }}
+                          <motion.img 
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            src={zoomedImageUrl}
+                            alt="Zoomed Visualization"
+                            className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+                            referrerPolicy="no-referrer"
                           />
-                          
-                          <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
-                            <motion.div
-                              initial={{ scale: 0.9, opacity: 0 }}
-                              animate={{ scale: 1, opacity: 1 }}
-                              exit={{ scale: 0.9, opacity: 0 }}
-                              className="relative max-w-full max-h-full"
-                            >
-                              <div className="overflow-auto max-w-[90vw] max-h-[85vh] rounded-lg shadow-2xl no-scrollbar">
-                                <img 
-                                  src={zoomedImageUrl}
-                                  alt="Zoomed Visualization"
-                                  className="min-w-full h-auto cursor-crosshair hover:scale-[2] transition-transform duration-500 origin-center"
-                                  style={{ transformOrigin: 'var(--mouse-x, 50%) var(--mouse-y, 50%)' }}
-                                  onMouseMove={(e) => {
-                                    const rect = e.currentTarget.getBoundingClientRect();
-                                    const x = ((e.clientX - rect.left) / rect.width) * 100;
-                                    const y = ((e.clientY - rect.top) / rect.height) * 100;
-                                    e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
-                                    e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
-                                  }}
-                                  referrerPolicy="no-referrer"
-                                />
-                              </div>
-                              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex items-center gap-3 text-white/50 text-[10px] font-bold uppercase tracking-widest whitespace-nowrap">
-                                <Search className="w-3 h-3" />
-                                Hover to zoom in detail
-                              </div>
-                            </motion.div>
-                          </div>
-
                           <button 
                             onClick={(e) => {
                               e.stopPropagation();
                               setIsImageZoomed(false);
                               setZoomedImageUrl(null);
                             }}
-                            className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors z-[210]"
+                            className="absolute top-8 right-8 p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
                           >
                             <X className="w-6 h-6" />
                           </button>
@@ -707,22 +703,46 @@ export default function App() {
                     {selectedActivity?.links && (
                       <div className="mt-8 pt-8 border-t border-zinc-100 space-y-4">
                         <h4 className="text-xs font-bold uppercase tracking-widest text-zinc-400">&lt;제작 영상&gt;</h4>
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           {selectedActivity.links.map((link, i) => (
                             <a 
                               key={i}
                               href={link.url}
                               target="_blank"
                               rel="noreferrer"
-                              className="group flex items-center justify-between p-4 bg-zinc-50 border border-zinc-100 rounded-2xl hover:bg-accent hover:border-accent transition-all duration-300"
+                              className="group block bg-zinc-50 border border-zinc-100 rounded-2xl overflow-hidden hover:border-accent hover:shadow-xl hover:shadow-accent/5 transition-all duration-300"
                             >
-                              <div className="flex items-center gap-3">
-                                <div className="p-2 bg-white rounded-lg group-hover:bg-white/20 transition-colors shadow-sm">
-                                  <ExternalLink className="w-4 h-4 text-accent group-hover:text-white" />
+                              {(link as any).thumbnail ? (
+                                <div className="aspect-video relative overflow-hidden">
+                                  <img 
+                                    src={(link as any).thumbnail} 
+                                    alt={link.label}
+                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    referrerPolicy="no-referrer"
+                                  />
+                                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
+                                    <div className="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-300">
+                                      <ExternalLink className="w-5 h-5 text-accent" />
+                                    </div>
+                                  </div>
                                 </div>
-                                <span className="text-xs font-bold text-zinc-600 group-hover:text-white">{link.label}</span>
-                              </div>
-                              <ArrowUpRight className="w-4 h-4 text-zinc-300 group-hover:text-white transition-colors" />
+                              ) : (
+                                <div className="p-4 flex items-center justify-between">
+                                  <div className="flex items-center gap-3">
+                                    <div className="p-2 bg-white rounded-lg group-hover:bg-accent group-hover:text-white transition-colors shadow-sm">
+                                      <ExternalLink className="w-4 h-4 text-accent group-hover:text-white" />
+                                    </div>
+                                    <span className="text-xs font-bold text-zinc-600 group-hover:text-accent">{link.label}</span>
+                                  </div>
+                                  <ArrowUpRight className="w-4 h-4 text-zinc-300 group-hover:text-accent transition-colors" />
+                                </div>
+                              )}
+                              {(link as any).thumbnail && (
+                                <div className="p-3 flex items-center justify-between bg-white border-t border-zinc-50">
+                                  <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-400 group-hover:text-accent transition-colors">{link.label}</span>
+                                  <ArrowUpRight className="w-3.5 h-3.5 text-zinc-300 group-hover:text-accent transition-colors" />
+                                </div>
+                              )}
                             </a>
                           ))}
                         </div>
