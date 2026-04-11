@@ -151,6 +151,20 @@ const workExperiences = [
     role: "인재채용팀 인턴",
     period: "2024.08 - 2024.12",
     desc: ["신입 채용 프로세스 운영 지원", "채용 브랜딩 콘텐츠 및 행사 기획·실행"],
+    images: [
+      "https://github.com/chaeeun-hyun/portfolio/raw/cdb1ba43b16dca275f205611982c192b9feb8920/%EA%B5%90%EC%9C%A1.webp",
+      "https://github.com/chaeeun-hyun/portfolio/raw/cdb1ba43b16dca275f205611982c192b9feb8920/%EB%B3%B5%EB%A6%AC%ED%9B%84%EC%83%9D.webp",
+      "https://github.com/chaeeun-hyun/portfolio/raw/cdb1ba43b16dca275f205611982c192b9feb8920/%EC%82%AC%EB%82%B4%EB%8F%99%ED%98%B8%ED%9A%8C.webp",
+      "https://github.com/chaeeun-hyun/portfolio/raw/cdb1ba43b16dca275f205611982c192b9feb8920/%EC%98%A4%ED%94%BC%EC%8A%A4%EC%86%8C%EA%B0%9C.webp",
+      "https://github.com/chaeeun-hyun/portfolio/raw/cdb1ba43b16dca275f205611982c192b9feb8920/%EC%A1%B0%EC%A7%81%EB%AC%B8%ED%99%94.webp"
+    ],
+    secondaryImages: [
+      "https://github.com/chaeeun-hyun/portfolio/raw/2ef78854d055e9bf6ff40f64fc17dc6b1b2e72f5/onsday1.webp",
+      "https://github.com/chaeeun-hyun/portfolio/raw/2ef78854d055e9bf6ff40f64fc17dc6b1b2e72f5/onsday4.webp",
+      "https://github.com/chaeeun-hyun/portfolio/raw/cdb1ba43b16dca275f205611982c192b9feb8920/interview.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/cdb1ba43b16dca275f205611982c192b9feb8920/interview2.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/2ef78854d055e9bf6ff40f64fc17dc6b1b2e72f5/interview3.png"
+    ],
     projects: [
       {
         title: "신입 채용 프로세스 운영 지원",
@@ -226,6 +240,14 @@ const workExperiences = [
     role: "마케팅팀 인턴",
     period: "2023.03 - 2023.06",
     desc: ["SNS 채널 운영 및 CX 관리", "온/오프라인 프로모션 및 행사 운영"],
+    images: [
+      "https://github.com/chaeeun-hyun/portfolio/raw/6930754c257bb28c1512fdb667b93091c4af2980/%EA%B1%B4%EA%B5%AD%EC%9C%A0%EC%97%856.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/6930754c257bb28c1512fdb667b93091c4af2980/%EA%B1%B4%EA%B5%AD%EC%9C%A0%EC%97%855.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/6930754c257bb28c1512fdb667b93091c4af2980/%EA%B1%B4%EA%B5%AD%EC%9C%A0%EC%97%852.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/6930754c257bb28c1512fdb667b93091c4af2980/%EA%B1%B4%EA%B5%AD%EC%9C%A0%EC%97%851.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/6930754c257bb28c1512fdb667b93091c4af2980/%EA%B1%B4%EA%B5%AD%EC%9C%A0%EC%97%853.png",
+      "https://github.com/chaeeun-hyun/portfolio/raw/6930754c257bb28c1512fdb667b93091c4af2980/%EA%B1%B4%EA%B5%AD%EC%9C%A0%EC%97%854.png"
+    ],
     projects: [
       {
         title: "SNS 마케팅 및 고객 경험(CX) 관리",
@@ -359,6 +381,57 @@ export default function App() {
                     <h3 className="text-3xl font-bold tracking-tight">{selectedExperience.company}</h3>
                     <p className="text-sm font-bold uppercase tracking-widest text-zinc-400">{selectedExperience.period}</p>
                   </div>
+
+                  {(selectedExperience as any).images && (
+                    <div className="pb-4">
+                      <div className="flex gap-4 overflow-x-auto pb-4 -mx-2 px-2 snap-x scrollbar-thin scrollbar-thumb-zinc-200 scrollbar-track-transparent">
+                        {(selectedExperience as any).images.map((img: string, i: number) => (
+                          <div 
+                            key={i} 
+                            className={`flex-shrink-0 ${
+                              selectedExperience.company === "CJ올리브네트웍스" 
+                                ? "w-48 aspect-[3/4]" 
+                                : "w-48 h-48"
+                            } rounded-2xl overflow-hidden border border-zinc-100 snap-start shadow-sm`}
+                          >
+                            <img 
+                              src={img} 
+                              alt={`Content Thumbnail ${i + 1}`} 
+                              className="w-full h-full object-cover"
+                              referrerPolicy="no-referrer"
+                            />
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {(selectedExperience as any).secondaryImages && (
+                    <div className="pb-4">
+                      <div className="flex gap-4 overflow-x-auto pb-4 -mx-2 px-2 snap-x scrollbar-thin scrollbar-thumb-zinc-200 scrollbar-track-transparent">
+                        {(selectedExperience as any).secondaryImages.map((img: string, i: number) => (
+                          <div 
+                            key={i} 
+                            onClick={() => {
+                              setZoomedImageUrl(img);
+                              setIsImageZoomed(true);
+                            }}
+                            className="flex-shrink-0 w-56 aspect-[4/3] rounded-2xl overflow-hidden border border-zinc-100 snap-start shadow-sm cursor-zoom-in group relative"
+                          >
+                            <img 
+                              src={img} 
+                              alt={`Secondary Content ${i + 1}`} 
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                              referrerPolicy="no-referrer"
+                            />
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                              <Sparkles className="w-5 h-5 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
 
                   <div className="space-y-16">
                     {selectedExperience.projects?.map((project, idx) => (
@@ -678,6 +751,27 @@ export default function App() {
               </div>
             </div>
 
+            {/* Philosophy Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="max-w-3xl py-12 border-y border-zinc-100"
+            >
+              <h2 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 mb-6">
+                AI 기반의 효율화, <span className="text-accent">Human-Touch</span> 기반의 몰입.
+              </h2>
+              <div className="space-y-2">
+                <p className="text-lg text-zinc-500 leading-relaxed font-medium">
+                  AI로 반복 업무를 줄이고, 사람과 조직의 연결에 집중합니다.
+                </p>
+                <p className="text-lg text-zinc-500 leading-relaxed font-medium">
+                  고밀도 조직으로 비즈니스의 성장을 이끄는 <span className="text-zinc-900">High-Touch HR 파트너</span>입니다.
+                </p>
+              </div>
+            </motion.div>
+
             {/* Integrated About Me */}
             <div id="about" className="flex flex-col md:flex-row gap-16 items-start">
               <div className="flex-1 space-y-10">
@@ -686,7 +780,7 @@ export default function App() {
                   <h3 className="text-6xl font-bold tracking-tighter">현채은</h3>
                 </div>
                 <p className="text-3xl md:text-4xl leading-[1.1] text-zinc-900 font-bold tracking-tight max-w-2xl">
-                  성장하는 조직의 '인재 밀도'를 높이는 <br />
+                  조직의 '인재 밀도'를 높이는 <br />
                   비즈니스 파트너
                 </p>
                 <div className="flex gap-16 pt-4">
