@@ -104,6 +104,11 @@ const activities = [
       "https://github.com/chaeeun-hyun/portfolio/raw/dde08f51a09bc9cafa3b0260784bcd5f7cf562a6/%EB%A6%AC%ED%94%8C%EB%A6%BF2%EB%A9%B4.png",
       "https://github.com/chaeeun-hyun/portfolio/raw/dde08f51a09bc9cafa3b0260784bcd5f7cf562a6/%EB%A6%AC%ED%94%8C%EB%A6%BF3%EB%A9%B4.png",
       "https://github.com/chaeeun-hyun/portfolio/raw/dde08f51a09bc9cafa3b0260784bcd5f7cf562a6/%EB%A6%AC%ED%94%8C%EB%A6%BF4%EB%A9%B4.png"
+    ],
+    resultImages: [
+      "https://github.com/chaeeun-hyun/portfolio/raw/57e7e0eb7059e86db9ca9062745cc9994a6a36f0/2022416%EC%9D%98%EA%BF%88%EA%B2%B0%EA%B3%BC%EC%9E%90%EB%A3%8C%EC%A7%91_0.jpg",
+      "https://github.com/chaeeun-hyun/portfolio/raw/57e7e0eb7059e86db9ca9062745cc9994a6a36f0/2022416%EC%9D%98%EA%BF%88%EA%B2%B0%EA%B3%BC%EC%9E%90%EB%A3%8C%EC%A7%91_0(2).jpg",
+      "https://github.com/chaeeun-hyun/portfolio/raw/57e7e0eb7059e86db9ca9062745cc9994a6a36f0/2022416%EC%9D%98%EA%BF%88%EA%B2%B0%EA%B3%BC%EC%9E%90%EB%A3%8C%EC%A7%91_1.jpg"
     ]
   }
 ];
@@ -612,6 +617,32 @@ export default function App() {
                         <p className="mt-4 text-[10px] text-zinc-400 font-bold uppercase tracking-widest text-center">
                           {selectedProject.category === "HR" ? "Pay Policy Line 설계 분석" : "프로그램 시각 자료"}
                         </p>
+                      </div>
+                    )}
+
+                    {(selectedActivity as any)?.resultImages && (
+                      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-0 rounded-3xl overflow-hidden border border-zinc-100 shadow-md">
+                        {(selectedActivity as any).resultImages.map((img: string, i: number) => (
+                          <div key={i} className="flex flex-col items-center">
+                            <div 
+                              onClick={() => {
+                                setZoomedImageUrl(img);
+                                setIsImageZoomed(true);
+                              }}
+                              className="relative group cursor-zoom-in w-full h-full rounded-none"
+                            >
+                              <img 
+                                src={img} 
+                                alt={`Result Visualization ${i + 1}`} 
+                                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                referrerPolicy="no-referrer"
+                              />
+                              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                                <Sparkles className="w-6 h-6 text-white opacity-0 group-hover:opacity-100 transition-opacity" />
+                              </div>
+                            </div>
+                          </div>
+                        ))}
                       </div>
                     )}
 
