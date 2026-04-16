@@ -167,7 +167,7 @@ const projects = [
 ];
 
 const skills = [
-  { category: "AI", icon: "🤖", items: ["ChatGPT", "Gemini", "Claude"] },
+  { category: "AI", icon: "🤖", items: ["Gemini", "Claude", "Cursor"] },
   { category: "Data & Analytics", icon: "📊", items: ["SQL (SQL Developer)"] },
   { category: "Content & Design", icon: "🎨", items: ["Adobe Lightroom", "Photoshop", "Premiere Pro"] },
   { category: "Productivity", icon: "⚡️", items: ["Notion", "Microsoft Office"] }
