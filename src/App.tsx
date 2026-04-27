@@ -837,7 +837,7 @@ export default function App() {
                   <span className="text-sm font-bold text-zinc-400 uppercase tracking-[0.3em]">TA & HR Partner</span>
                 </div>
                 <div className="flex gap-2">
-                  {["recruiting", "branding", "cx"].map(tag => (
+                  {["People", "HRM", "Recruiting"].map(tag => (
                     <span key={tag} className="px-4 py-1.5 bg-white border border-zinc-100 rounded-full text-[10px] font-bold uppercase tracking-widest text-zinc-500">
                       {tag}
                     </span>
